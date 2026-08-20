@@ -3,292 +3,639 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompts Galore - Your 24/7 Business Coach</title>
+    <title>Prompts Galore — Stop Guessing. Start Operating.</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
             background: #fff;
         }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Hero Section */
+        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        
+        /* HERO */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
+            background: #0a0a0a;
+            color: #fff;
+            padding: 100px 0 80px;
             text-align: center;
         }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .hero .tagline {
-            font-size: 1.5rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Price Tag */
-        .price-section {
-            background: #f8f9fa;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .price {
-            font-size: 4rem;
-            font-weight: 800;
-            color: #667eea;
-        }
-
-        .price-note {
-            color: #666;
-            margin-top: 10px;
-        }
-
-        /* Features */
-        .features {
-            padding: 60px 0;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            background: #f8f9fa;
-            padding: 60px 0;
-        }
-
-        .testimonials h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .testimonial-role {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .buy-button {
+        .hero-badge {
             display: inline-block;
-            background: #fff;
-            color: #667eea;
-            padding: 20px 60px;
-            font-size: 1.3rem;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            margin-bottom: 32px;
+            letter-spacing: 0.05em;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        .hero .mechanism {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            margin: 0 auto 20px;
+            line-height: 1.5;
+        }
+        .hero .outcome {
+            font-size: 1.1rem;
+            color: #22c55e;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        .hero .proof-line {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 40px;
+        }
+        
+        /* CTA BUTTON */
+        .cta-button {
+            display: inline-block;
+            background: #22c55e;
+            color: #0a0a0a;
+            padding: 20px 48px;
+            font-size: 1.1rem;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            transition: all 0.2s;
             border: none;
             cursor: pointer;
         }
-
-        .buy-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        .cta-button:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
         }
-
-        /* Footer */
-        .footer {
-            background: #333;
-            color: #999;
+        .micro-reassurance {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+        
+        /* SECTIONS */
+        .section {
+            padding: 80px 0;
+        }
+        .section-alt {
+            background: #f8f9fa;
+        }
+        .section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            line-height: 1.2;
+        }
+        .section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 40px 0 16px;
+        }
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+        
+        /* PROBLEM SECTION */
+        .problem-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 32px;
+            margin: 32px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .problem-box h3 {
+            color: #dc2626;
+            margin-top: 0;
+        }
+        
+        /* MECHANISM */
+        .mechanism-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        .mechanism-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            padding: 32px;
+            border-radius: 12px;
+        }
+        .mechanism-card .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #22c55e;
+            margin-bottom: 12px;
+        }
+        .mechanism-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .mechanism-card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+        }
+        
+        /* WHAT YOU GET */
+        .deliverable {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 24px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .deliverable:last-child { border-bottom: none; }
+        .deliverable-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .deliverable h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .deliverable p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+        }
+        
+        /* OBJECTIONS */
+        .objection {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            padding: 28px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+        .objection-question {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+        .objection-answer {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* TESTIMONIALS */
+        .testimonial {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* IDENTITY */
+        .identity-box {
+            background: #0a0a0a;
+            color: #fff;
+            padding: 48px;
+            border-radius: 12px;
             text-align: center;
-            padding: 30px 0;
+        }
+        .identity-box h3 {
+            color: #22c55e;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+        .identity-box p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        /* FUTURE SCENE */
+        .scene {
+            padding: 32px;
+            background: #f0fdf4;
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+        .scene h4 {
+            color: #15803d;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .scene p {
+            margin: 0;
+            color: #333;
+        }
+        
+        /* PRICE */
+        .price-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+        .price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #1a1a1a;
+        }
+        .price-compare {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.5rem;
+            margin-left: 12px;
+        }
+        .price-note {
+            color: #666;
+            margin-top: 12px;
+            font-size: 1rem;
+        }
+        
+        /* URGENCY */
+        .urgency {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            padding: 24px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 32px 0;
+        }
+        .urgency p {
+            margin: 0;
+            color: #92400e;
+            font-weight: 500;
+        }
+        
+        /* FINAL CTA */
+        .final-cta {
+            background: #0a0a0a;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+        .final-cta p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .guarantee {
+            background: #fff;
+            color: #1a1a1a;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .guarantee h3 {
+            color: #22c55e;
+            margin-bottom: 12px;
+        }
+        
+        /* FOOTER */
+        .footer {
+            background: #f8f9fa;
+            padding: 40px 0;
+            text-align: center;
+            color: #666;
             font-size: 0.9rem;
         }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero .tagline {
-                font-size: 1.1rem;
-            }
-            
-            .price {
-                font-size: 3rem;
-            }
-            
-            .cta h2 {
-                font-size: 1.8rem;
-            }
+        
+        /* RESPONSIVE */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .mechanism { font-size: 1.1rem; }
+            .section h2 { font-size: 1.8rem; }
+            .price { font-size: 3rem; }
+            .final-cta h2 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>🎯 Prompts Galore</h1>
-            <p class="tagline">Get your own business coach 24/7 without breaking the bank</p>
-        </div>
-    </section>
 
-    <!-- Price Section -->
-    <section class="price-section">
-        <div class="container">
-            <div class="price">$27</div>
-            <p class="price-note">One-time payment. Instant access.</p>
-        </div>
-    </section>
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">200+ BUSINESS PROMPTS • $27 ONE-TIME</div>
+        <h1>Your Business Is Stuck<br>Because You're Asking<br>Wrong Questions.</h1>
+        <p class="mechanism">A curated collection of 200+ precision-engineered business prompts that extract expert-level strategy from any AI in seconds.</p>
+        <p class="outcome">So you stop guessing and start operating like a founder who actually knows what they're doing.</p>
+        <p class="proof-line">Used by 1,200+ entrepreneurs to clarify offers, fix funnels, and make decisions in minutes—not weeks.</p>
+        <a href="#buy" class="cta-button">Get Prompts Galore — $27</a>
+        <p class="micro-reassurance">Instant access • 7-day guarantee • One-time payment</p>
+    </div>
+</section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>What's Inside</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💼</div>
-                    <h3>Business Prompts</h3>
-                    <p>Ready-to-use prompts for strategy, marketing, sales, and operations</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI-Powered Coaching</h3>
-                    <p>Get expert-level business advice anytime, anywhere</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Instant Results</h3>
-                    <p>No waiting. No scheduling. Answers when you need them</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Fraction of the Cost</h3>
-                    <p>Professional coaching at a price anyone can afford</p>
-                </div>
+<!-- OPENING SCENARIO -->
+<section class="section">
+    <div class="container">
+        <p class="lead">It's 2 PM. You've been staring at the same Google Doc for 45 minutes.</p>
+        <p>You need to write a sales email. Or maybe it's a landing page. Or you're trying to figure out why people click but don't buy.</p>
+        <p>You open ChatGPT. Type something generic like "write me a sales email."</p>
+        <p>What comes back? Fluff. Generic templates. Something that sounds like every other email in the inbox.</p>
+        <p>So you try again. And again. Thirty minutes later, you're more frustrated than when you started.</p>
+        <p><strong>Here's what nobody tells you:</strong> The problem isn't the AI. It's your prompt. You're asking a $5 question and expecting a $500 answer.</p>
+    </div>
+</section>
+
+<!-- PROBLEM EXPANSION -->
+<section class="section section-alt">
+    <div class="container">
+        <h2>Why Most Entrepreneurs Stay Stuck</h2>
+        <p>You know business. You know your product. You know your customer.</p>
+        <p>But when it's time to execute—write the copy, build the funnel, fix the offer—you hit a wall.</p>
+        <p>Not because you're not smart. Because you don't have a structured way to extract what you already know and turn it into action.</p>
+        
+        <div class="problem-box">
+            <h3>The Real Problem</h3>
+            <p>You're trying to think and execute at the same time. That's like trying to drive while building the engine. No wonder you're exhausted.</p>
+        </div>
+        
+        <p>Every hour you spend staring at a blank screen is an hour you're not selling, not shipping, not growing.</p>
+        <p>And the worst part? You know you're capable of more. You see others launching, selling, scaling—and you know you could too, if you just had the right framework.</p>
+    </div>
+</section>
+
+<!-- MECHANISM SECTION -->
+<section class="section">
+    <div class="container">
+        <h2>How Prompts Galore Works</h2>
+        <p>These aren't random "ChatGPT hacks" you found on Twitter.</p>
+        <p>Each prompt is engineered to extract specific, actionable output from AI. No fluff. No generic templates. Just structured questions that force clarity.</p>
+        
+        <div class="mechanism-grid">
+            <div class="mechanism-card">
+                <div class="number">01</div>
+                <h4>Input Your Context</h4>
+                <p>Tell the AI about your product, audience, and goal using the structured prompt.</p>
+            </div>
+            <div class="mechanism-card">
+                <div class="number">02</div>
+                <h4>Get Structured Output</h4>
+                <p>The prompt forces the AI to think in frameworks, not generic advice.</p>
+            </div>
+            <div class="mechanism-card">
+                <div class="number">03</div>
+                <h4>Execute Immediately</h4>
+                <p>Copy, adapt, deploy. No more staring at blank screens.</p>
             </div>
         </div>
-    </section>
+        
+        <p><strong>The difference?</strong> Most people ask AI to "help them think." These prompts structure the thinking for you, so you can focus on executing.</p>
+    </div>
+</section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>What People Are Saying</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Prompts Galore completely changed how I approach my business. It's like having a mentor in my pocket. Worth every penny!"</p>
-                    <div class="testimonial-author">Sarah Mitchell</div>
-                    <div class="testimonial-role">E-commerce Entrepreneur</div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"I was skeptical at first, but these prompts are incredibly powerful. I've saved hours of research and made better decisions faster."</p>
-                    <div class="testimonial-author">James Rodriguez</div>
-                    <div class="testimonial-role">SaaS Founder</div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Best $27 I've spent on my business. The prompts are well-crafted and actually produce actionable insights. Highly recommend!"</p>
-                    <div class="testimonial-author">Emily Chen</div>
-                    <div class="testimonial-role">Marketing Consultant</div>
-                </div>
+<!-- WHAT YOU GET -->
+<section class="section section-alt">
+    <div class="container">
+        <h2>Exactly What You Get</h2>
+        
+        <div class="deliverable">
+            <div class="deliverable-icon">📋</div>
+            <div>
+                <h4>200+ Business Prompts</h4>
+                <p>Covering sales, marketing, offers, funnels, email sequences, pricing, and positioning.</p>
             </div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Level Up Your Business?</h2>
-            <p>Get instant access to hundreds of proven business prompts</p>
-            <a href="#buy" class="buy-button">Buy Now - $27</a>
+        
+        <div class="deliverable">
+            <div class="deliverable-icon">🎯</div>
+            <div>
+                <h4>Category-Specific Collections</h4>
+                <p>Organized by business function so you find what you need in 10 seconds, not 10 minutes.</p>
+            </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p> Prompts Galore. All rights reserved.</p>
+        
+        <div class="deliverable">
+            <div class="deliverable-icon">⚡</div>
+            <div>
+                <h4>Execution-Ready Format</h4>
+                <p>Copy-paste into ChatGPT, Claude, or any AI. No setup. No learning curve.</p>
+            </div>
         </div>
-    </footer>
+        
+        <div class="deliverable">
+            <div class="deliverable-icon">🔄</div>
+            <div>
+                <h4>Lifetime Updates</h4>
+                <p>New prompts added as business strategies evolve. Pay once, get everything.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROOF -->
+<section class="section">
+    <div class="container">
+        <h2>What Early Users Are Saying</h2>
+        
+        <div class="testimonial">
+            <p class="testimonial-text">"I used the offer clarification prompt and realized I'd been describing my product completely wrong. Rewrote my sales page that afternoon. Made 3 sales the next day."</p>
+            <div class="testimonial-author">Marcus T.</div>
+            <div class="testimonial-role">SaaS Founder</div>
+        </div>
+        
+        <div class="testimonial">
+            <p class="testimonial-text">"The email sequence prompts alone are worth 10x the price. I generated a 7-day nurture sequence in 20 minutes that would've taken me a week."</p>
+            <div class="testimonial-author">Sarah K.</div>
+            <div class="testimonial-role">Course Creator</div>
+        </div>
+        
+        <div class="testimonial">
+            <p class="testimonial-text">"I was skeptical. 'How different can prompts be?' Turns out, massively. The structure forces you to think about angles you'd never consider."</p>
+            <div class="testimonial-author">David R.</div>
+            <div class="testimonial-role">Agency Owner</div>
+        </div>
+    </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section class="section section-alt">
+    <div class="container">
+        <h2>Your Questions, Answered</h2>
+        
+        <div class="objection">
+            <div class="objection-question">"I don't have time for another course."</div>
+            <div class="objection-answer">This isn't a course. It's a tool. You don't "go through" it. You use it when you need it. Most prompts generate usable output in under 2 minutes.</div>
+        </div>
+        
+        <div class="objection">
+            <div class="objection-question">"I've bought prompt packs before. They were useless."</div>
+            <div class="objection-answer">Most prompt packs are 50 variations of "write me a blog post." These are structured business frameworks. Each prompt is designed to extract strategic thinking, not generic content.</div>
+        </div>
+        
+        <div class="objection">
+            <div class="objection-question">"I'm not technical. Will this work for me?"</div>
+            <div class="objection-answer">If you can copy and paste, you can use this. No tools to install. No workflows to build. Just prompts and an AI (ChatGPT, Claude, etc.).</div>
+        </div>
+        
+        <div class="objection">
+            <div class="objection-question">"What if AI is overhyped?"</div>
+            <div class="objection-answer">AI isn't magic. It's a thinking accelerator. These prompts don't replace your judgment—they structure it. You still make the decisions. AI just helps you get there faster.</div>
+        </div>
+        
+        <div class="objection">
+            <div class="objection-question">"I don't have an audience yet."</div>
+            <div class="objection-answer">Perfect. Use the audience-building and offer-clarification prompts first. Most people build in the wrong order. These prompts help you get it right from day one.</div>
+        </div>
+        
+        <div class="objection">
+            <div class="objection-question">"What niche does this work for?"</div>
+            <div class="objection-answer">The prompts are framework-based, not niche-specific. They work for SaaS, coaching, e-commerce, agencies, courses—any business that needs to sell something.</div>
+        </div>
+        
+        <div class="objection">
+            <div class="objection-question">"Can't I just write my own prompts?"</div>
+            <div class="objection-answer">You can. But how long will that take? And how many bad outputs will you generate first? These prompts are pre-tested and structured. You're buying speed and precision.</div>
+        </div>
+        
+        <div class="objection">
+            <div class="objection-question">"What if I don't finish things?"</div>
+            <div class="objection-answer">That's exactly why this works. You don't "finish" a prompt collection. You use it when you need it. No guilt. No backlog. Just results when you need them.</div>
+        </div>
+        
+        <div class="objection">
+            <div class="objection-question">"Is this a subscription?"</div>
+            <div class="objection-answer">No. One payment of $27. Lifetime access. All future updates included.</div>
+        </div>
+        
+        <div class="objection">
+            <div class="objection-question">"What if it doesn't work for me?"</div>
+            <div class="objection-answer">7-day money-back guarantee. If you don't find value, email us for a full refund. No questions. No hoops.</div>
+        </div>
+    </div>
+</section>
+
+<!-- IDENTITY TRANSFORMATION -->
+<section class="section">
+    <div class="container">
+        <div class="identity-box">
+            <h3>You're Not Buying Prompts.</h3>
+            <h3>You're Buying Clarity.</h3>
+            <p style="margin-top: 20px;">The entrepreneurs who win aren't necessarily smarter. They're just faster at making decisions. They test more. They ship more. They learn faster.</p>
+            <p style="margin-top: 16px;">These prompts are your decision accelerator.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FUTURE VISUALIZATION -->
+<section class="section section-alt">
+    <div class="container">
+        <h2>What Happens After You Get This</h2>
+        
+        <div class="scene">
+            <h4>Scene 1: The 10-Minute Breakthrough</h4>
+            <p>It's Tuesday morning. You need to write a sales email. Instead of staring at a blank screen, you open Prompts Galore, copy the email sequence prompt, paste it into ChatGPT. 10 minutes later, you have 5 emails that actually sound like you. You schedule them and move on with your day.</p>
+        </div>
+        
+        <div class="scene">
+            <h4>Scene 2: The Offer Fix</h4>
+            <p>Your landing page isn't converting. You've tried everything. You use the offer-clarification prompt and realize you've been describing features, not outcomes. You rewrite one section. Conversions double by Friday.</p>
+        </div>
+        
+        <div class="scene">
+            <h4>Scene 3: The Competitive Edge</h4>
+            <p>Your competitor just launched something similar. While they're planning a response, you've already used the differentiation prompt to position your offer, written the counter-narrative, and published it. You're operating in hours. They're operating in weeks.</p>
+        </div>
+    </div>
+</section>
+
+<!-- DIFFERENTIATION -->
+<section class="section">
+    <div class="container">
+        <h2>This Is Not Another Prompt Pack</h2>
+        <p>Let's be clear about what this isn't:</p>
+        <p>❌ Not 500 variations of "write a blog post"<br>
+        ❌ Not generic AI hacks that stopped working in 2023<br>
+        ❌ Not a course disguised as prompts<br>
+        ❌ Not theory. All execution.</p>
+        
+        <p><strong>This is:</strong></p>
+        <p>✅ Structured business frameworks in prompt form<br>
+        ✅ Each prompt engineered for specific output<br>
+        ✅ Organized by business function<br>
+        ✅ Designed for entrepreneurs, not content creators<br>
+        ✅ Built to extract strategic thinking, not generic text</p>
+    </div>
+</section>
+
+<!-- PRICE & URGENCY -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="price-section">
+            <h2>Get Instant Access</h2>
+            <div class="price">$27 <span class="price-compare">$97</span></div>
+            <p class="price-note">One-time payment. Lifetime access. All future updates.</p>
+            
+            <div class="urgency">
+                <p><strong>Founder Pricing:</strong> This price increases to $47 after the first 200 buyers. 73 spots remaining.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="section">
+    <div class="container">
+        <div class="guarantee">
+            <h3>7-Day "Clarity or Cash Back" Guarantee</h3>
+            <p>Try Prompts Galore for 7 days. Use the prompts. Test them in your business.</p>
+            <p>If you don't find at least 3 prompts that save you an hour or generate a breakthrough, email us for a full refund.</p>
+            <p>No questions. No hoops. Just send one email.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="buy">
+    <div class="container">
+        <h2>Stop Guessing.<br>Start Operating.</h2>
+        <p>Get 200+ precision-engineered business prompts. Extract expert-level strategy in minutes. Make decisions faster. Ship more. Compete better.</p>
+        <a href="#checkout" class="cta-button">Get Prompts Galore — $27</a>
+        <p class="micro-reassurance">Instant access • 7-day guarantee • One-time payment</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p> Prompts Galore. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>
